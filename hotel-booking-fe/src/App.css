@@ -1,0 +1,340 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  /* height: 10px; */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  /* border: 3px solid #f3e5f5; */
+}
+
+.nav-container {
+  display: flex;
+  padding: 5px 12%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  background-color: whitesmoke;
+}
+.nav-container ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+.nav-container h3 {
+  font-weight: 600;
+}
+.nav-container ul li {
+  display: flex;
+  list-style-type: none;
+}
+.nav-container ul li a {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+}
+.nav-container ul li a:active {
+  color: purple;
+}
+.nav-container ul li a:visited {
+  color: #000000;
+}
+.nav-container ul li a:hover {
+  color: purple;
+}
+.main-container {
+  padding: 10px 12%;
+}
+.search-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.search-container p {
+  font-size: 13px;
+  font-weight: 500;
+}
+.search-label {
+  padding: 15px 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.search-label div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-label button {
+  background-color: #1e40af;
+  border: 0px;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.search-label div input {
+  height: 28px;
+  width: 45%;
+  border: 1.5px solid #000000;
+  border-radius: 5px;
+  padding: 10px 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.companies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(249, 250, 250, 0.5);
+  padding: 5px 2px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.companies img {
+  object-fit: contain;
+  height: 22px;
+}
+.hot-deals {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hot-deals-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hot-deals-card {
+  height: 400px;
+  width: 32%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.hot-deals-card img {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+.hotel-desc {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 5px;
+}
+.hotel-desc p {
+  font-size: 13px;
+}
+.hotel-desc button {
+  background-color: #1e40af;
+  border: 0px;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+.about-us p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+}
+.benefit img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+.benefit h3 {
+  text-align: center;
+}
+.benefit p {
+  text-align: center;
+  font-size: 13px;
+}
+@media (max-width: 950px) {
+  .nav-container {
+    padding: 5px 5%;
+  }
+  .main-container {
+    padding: 10px 5%;
+  }
+}
+@media (max-width: 850px) and (min-width: 670px) {
+  .hot-deals-card {
+    height: 450px;
+    width: 49%;
+    margin: 20px auto;
+    margin-top: 0px;
+  }
+  .search-label div input {
+    width: 50%;
+  }
+}
+@media (max-width: 670px) {
+  .hot-deals-card {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 0px;
+  }
+  .search-label div input {
+    width: 50%;
+  }
+  .companies img {
+    height: 20px;
+  }
+  .search-container h3 {
+    font-size: 17px;
+  }
+  .nav-container h3 {
+    font-size: 17px;
+  }
+  .nav-container ul li a {
+    font-size: 14px;
+  }
+  .benefits {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefit {
+    width: 45%;
+  }
+  .benefit img {
+    height: 130px;
+  }
+}
+@media (max-width: 830px) {
+  .benefits {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefit {
+    width: 40%;
+  }
+  .benefit img {
+    height: 160px;
+  }
+}
+@media (min-width: 420px) and (max-width: 670px) {
+  .benefits {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefit {
+    width: 50%;
+  }
+  .benefit img {
+    height: 130px;
+  }
+}
+@media (min-width: 320px) and (max-width: 420px) {
+  .nav-container h3 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .nav-container ul li a {
+    font-size: 12px;
+  }
+  .search-label div input {
+    width: 65%;
+  }
+  .search-label button {
+    border-radius: 8px;
+    padding: 7px 15px;
+    font-weight: 400;
+  }
+  .search-container h3 {
+    font-size: 14px;
+  }
+  .search-container p {
+    font-size: 12px;
+  }
+  .companies img {
+    height: 16px;
+  }
+  .hot-deals h3 {
+    font-size: 15px;
+  }
+  .hotel-desc h3 {
+    font-size: 14px;
+  }
+  .hotel-desc p {
+    font-size: 12px;
+  }
+  .hotel-desc h5 {
+    font-size: 12px;
+  }
+  .hotel-desc button {
+    font-size: 12px;
+  }
+  .about-us h3 {
+    font-size: 15px;
+  }
+  .about-us p {
+    font-size: 12px;
+  }
+  .benefits {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .benefit {
+    width: 45%;
+  }
+  .benefit img {
+    height: 100px;
+  }
+  .benefit h3 {
+    font-size: 14px;
+  }
+  .benefit p {
+    font-size: 12px;
+  }
+}
